@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="sethi.kumar.hemendra.filmkhabar.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                app:auto_cycle="true"
+                app:indicator_visibility="visible"
+                app:pager_animation="Accordion"
+                app:pager_animation_span="1100" />
+                <com.daimajia.slider.library.Indicators.PagerIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/image_slider"
+                    app:selected_color="#555555"
+                    app:unselected_color="#55555555"
+                    app:shape="oval"
+                    app:selected_padding_left="3dp"
+                    app:selected_padding_right="3dp"
+                    app:unselected_padding_left="3dp"
+                    app:unselected_padding_right="3dp"
+                    app:selected_width="8dp"
+                    app:selected_height="8dp"
+                    app:unselected_width="4dp"
+                    app:unselected_height="4dp"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="5dp"
+            app:cardPreventCornerOverlap ="true"
+            android:background="#adad85"
+            app:contentPadding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upcoming Movies"
+                    android:textSize="20dp"
+                    android:textColor="#333333"
+                    android:id="@+id/header_movie"
+                    android:paddingStart="10dp" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="380dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/movie_recycler_view"
+                    android:layout_below="@id/header_movie">
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="5dp"
+            app:cardPreventCornerOverlap ="true"
+            android:background="#adad85"
+            app:contentPadding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popular Movies"
+                    android:textSize="20dp"
+                    android:textColor="#333333"
+                    android:id="@+id/header_movie_popular"
+                    android:paddingStart="10dp" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="380dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/popular_recycler_view"
+                    android:layout_below="@id/header_movie_popular">
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="5dp"
+            app:cardPreventCornerOverlap ="true"
+            android:background="#adad85"
+            app:contentPadding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top Rated Movies"
+                    android:textSize="20dp"
+                    android:textColor="#333333"
+                    android:id="@+id/header_movie_top"
+                    android:paddingStart="10dp" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="380dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/top_recycler_view"
+                    android:layout_below="@id/header_movie_top">
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
